@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Status</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <!-- <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="customer_dashboard.html">🏠 Home</a></li>
+                <li><a href="order.html">🛒 Order</a></li>
+                <li><a href="delivery_status.html" class="active">📦 Delivery Status</a></li>
+                <li><a href="support.html">📩 Contact Support</a></li>
+            </ul>
+        </div> -->
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Customer, Welcome back!</h1>
+            </header>
+
+            <section class="delivery-status">
+                <h2>Delivery Status</h2>
+                <label for="orderId">Enter Order ID:</label>
+                <textarea id="orderId" placeholder="Type here"></textarea>
+                <button onclick="checkDelivery()">Enter</button>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function checkDelivery() {
+            const orderId = document.getElementById("orderId").value.trim();
+            if (orderId) {
+                window.location.href = `customershowdeliverystatus.html?orderId=${encodeURIComponent(orderId)}`;
+                // alert("Checking status for Order ID: " + orderId);
+                // You can redirect or fetch order details dynamically
+            } else {
+                alert("Please enter an Order ID.");
+            }
+        }
+    </script>
+</body>
+</html>

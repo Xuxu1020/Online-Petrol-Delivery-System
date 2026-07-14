@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Ordering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #1f2854;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .sidebar {
+            background-color: #f4f4f9;
+            padding: 20px;
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            margin-left: 220px;
+            padding: 40px;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        label {
+            font-size: 16px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        Customer, Welcome back!
+    </div>
+
+    <!-- <div class="sidebar">
+        <a href="#">Order</a>
+        <a href="#">Delivery Status</a>
+        <a href="#">Contact Support/Provide Feedback</a>
+    </div> -->
+
+    <div class="container">
+        <div class="card">
+            <h2>Petrol Ordering</h2>
+
+            <form>
+                <label for="section">Section 10</label>
+                <br><br>
+
+                <label>Select Petrol Type</label><br>
+                <input type="radio" id="ron95" name="petrol" value="ron95" checked>
+                <label for="ron95">Ron 95</label><br>
+
+                <input type="radio" id="ron97" name="petrol" value="ron97">
+                <label for="ron97">Ron 97</label><br>
+
+                <input type="radio" id="diesel" name="petrol" value="diesel">
+                <label for="diesel">Diesel</label><br><br>
+
+                <label for="amount">Enter the amount of petrol wanted (Litre):</label><br>
+                <input type="text" id="amount" name="amount"><br><br>
+
+                <label for="location">Delivery Location</label><br>
+                <textarea id="location" name="location" rows="4"></textarea><br>
+
+                <input type="submit" value="Order">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

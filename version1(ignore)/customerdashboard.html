@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .order-section, .settings-section {
+            margin-bottom: 20px;
+        }
+        .order-section ul, .settings-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .order-section ul li, .settings-section ul li {
+            margin: 10px 0;
+        }
+        .order-section a, .settings-section a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .order-section a:hover, .settings-section a:hover {
+            text-decoration: underline;
+        }
+        .settings-section label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .settings-section select, .settings-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .settings-section button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .settings-section button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer, Welcome back!</h1>
+
+        <!-- Order Section -->
+        <div class="order-section">
+            <h2>Order</h2>
+            <ul>
+                <li><a href="#">Delivery Status</a></li>
+                <li><a href="#">Contact Support</a> / <a href="#">Provide Feedback</a></li>
+            </ul>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="settings-section">
+            <h2>Settings</h2>
+            <form>
+                <label for="petrol-type">Select Petrol Type</label>
+                <select id="petrol-type" name="petrol-type">
+                    <option value="run95">Run 95</option>
+                    <option value="run97">Run 97</option>
+                    <option value="diesel">Diesel</option>
+                </select>
+
+                <label for="amount">Enter the amount of petrol wanted (Litre):</label>
+                <input type="number" id="amount" name="amount" placeholder="50" required>
+
+                <label for="location">Delivery Location:</label>
+                <textarea id="location" name="location" rows="4" required>No. 23, Jalan Bukit Indah 2, Tanana Bukit Indah, AB000, Ampang, Selangor, Malaysia.</textarea>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <!-- <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="customer_dashboard.html">🏠 Home</a></li>
+                <li><a href="order.html">🛒 Order</a></li>
+                <li><a href="delivery_status.html" class="active">📦 Delivery Status</a></li>
+                <li><a href="support.html">📩 Contact Support</a></li>
+            </ul>
+        </div> -->
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Customer, Welcome back!</h1>
+            </header>
+
+            <section class="delivery-status">
+                <h2>Delivery Status</h2>
+                <div class="status-card">
+                    <h3>Status</h3>
+                    <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+                    <p><strong>Delivery Status:</strong> </p>
+                    <p><strong>ETA:</strong></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Example: Simulate fetching order ID passed from the previous page
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get("orderId");
+        
+        if (orderId) {
+            document.getElementById("orderId").textContent = orderId;
+        } else {
+            alert("No Order ID provided.");
+        }
+    </script>
+</body>
+</html>
